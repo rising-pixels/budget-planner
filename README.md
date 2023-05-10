@@ -3,7 +3,7 @@ A simple budgeting app
 
 ## Run Locally
 
-### 1.  Clone the project with https
+### 1. Clone the project with https
 
   `git clone https://github.com/rising-pixels/budget-planner.git`
 
@@ -21,8 +21,9 @@ Or ssh
 
 ### 4. Select proper branch if main is empty
 
-`git fetch```git checkout <branch_name>`
+`git fetch`   
+`git checkout <branch_name>`
 
-### 5 .Start the server
+### 5. Start the server
 
   `yarn dev`
