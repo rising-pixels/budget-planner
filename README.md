@@ -15,14 +15,14 @@ Or ssh
 
   `cd budget-planner`
 
-### 3. Install dependencies
-
-  `yarn/yarn install`
-
-### 4. Select proper branch if main is empty
+### 3. Select proper branch if main is empty
 
 `git fetch`   
 `git checkout <branch_name>`
+
+### 4. Install dependencies
+
+  `yarn/yarn install`
 
 ### 5. Start the server
 
