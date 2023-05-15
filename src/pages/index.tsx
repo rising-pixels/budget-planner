@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Dexie, { Table } from "dexie";
 
-export interface LuckyNumber {
+interface LuckyNumber {
   number: number;
 }
 
-export class MySubclassedDexie extends Dexie {
+class MySubclassedDexie extends Dexie {
   luckyNumber: Table<LuckyNumber>;
 
   constructor() {
@@ -23,7 +23,7 @@ const HomePage = () => {
 
   const drawNumberHandler = async () => {
     try {
-      db.luckyNumber.clear();
+      await db.luckyNumber.clear();
       const randomNumber = Math.floor(Math.random() * 11);
       setLuckyNumber(randomNumber);
       await db.luckyNumber.add({ number: randomNumber });
