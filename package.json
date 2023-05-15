@@ -14,7 +14,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "dexie": "^3.2.3",
@@ -26,6 +27,7 @@
   "devDependencies": {
     "@types/node": "^20.1.1",
     "@types/react": "^18.2.6",
+    "prettier": "2.8.8",
     "typescript": "^5.0.4"
   }
 }
