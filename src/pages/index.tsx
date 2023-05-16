@@ -1,16 +1,15 @@
 import React from "react";
 import { Typography } from "antd";
 import "antd/dist/reset.css";
-import { css, useTheme } from "@emotion/react";
-import "@emotion/react";
-/** @jsxImportSource @emotion/react */
+import styled from "@emotion/styled";
 
+const { Text } = Typography;
+const TextStyled = styled(Text)`
+  color: ${(props) => props.theme.blue6};
+`;
 const HomePage = () => {
-  const { blue6 } = useTheme();
-  const { Text } = Typography;
-  const textStyle = css`color: ${blue6};`;
-  
-  return <Text css={textStyle}>Hello World</Text>;
+
+  return <TextStyled>Hello World</TextStyled>;
 };
 
 export default HomePage;
