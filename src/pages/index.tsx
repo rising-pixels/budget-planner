@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Dexie, { Table } from "dexie";
+import { Typography } from "antd";
+import "antd/dist/reset.css";
+import styled from "@emotion/styled";
 
 interface LuckyNumber {
   number: number;
@@ -17,6 +20,12 @@ class MySubclassedDexie extends Dexie {
 }
 
 const db = new MySubclassedDexie();
+
+const { Text } = Typography;
+
+const TextStyled = styled(Text)`
+  color: ${(props) => props.theme.blue6};
+`;
 
 const HomePage = () => {
   const [luckyNumber, setLuckyNumber] = useState<number | null>(null);
@@ -57,7 +66,7 @@ const HomePage = () => {
 
   return (
     <>
-      <p>Hello World</p>
+      <TextStyled>Hello World</TextStyled>
       <button onClick={clearDataHandler}>Clear Data</button>
       <button onClick={drawNumberHandler}>Draw a number</button>
       {luckyNumber !== null ? (
