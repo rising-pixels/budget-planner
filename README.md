@@ -1,29 +1,30 @@
 # budget-planner
+
 A simple budgeting app
 
 ## Run Locally
 
 ### 1. Clone the project with https
 
-  `git clone https://github.com/rising-pixels/budget-planner.git`
+`git clone https://github.com/rising-pixels/budget-planner.git`
 
 Or ssh
 
-  `git clone git@github.com:rising-pixels/budget-planner.git`
+`git clone git@github.com:rising-pixels/budget-planner.git`
 
 ### 2. Go to the project directory
 
-  `cd budget-planner`
+`cd budget-planner`
 
 ### 3. Select proper branch if main is empty
 
-`git fetch`   
+`git fetch`  
 `git checkout <branch_name>`
 
 ### 4. Install dependencies
 
-  `yarn/yarn install`
+`yarn/yarn install`
 
 ### 5. Start the server
 
-  `yarn dev`
+`yarn dev`
