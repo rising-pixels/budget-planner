@@ -22,6 +22,7 @@ class MySubclassedDexie extends Dexie {
 const db = new MySubclassedDexie();
 
 const { Text } = Typography;
+
 const TextStyled = styled(Text)`
   color: ${(props) => props.theme.blue6};
 `;
