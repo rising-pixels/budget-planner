@@ -1,14 +1,15 @@
 {
   "extends": ["next/core-web-vitals", "prettier"],
+  "plugins": ["prettier", "import"],
   "rules": {
     "prettier/prettier": "error",
-    "no-default-export": "error"
+    "import/no-default-export": "error"
   },
   "overrides": [
     {
-      "files": ["src/pages/index.tsx"],
+      "files": ["./src/pages/index.tsx", "./src/pages/_app.tsx"],
       "rules": {
-        "no-default-export": "off"
+        "import/no-default-export": "off"
       }
     }
   ]
