@@ -1,0 +1,15 @@
+{
+  "extends": ["next/core-web-vitals", "prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "no-default-export": "error"
+  },
+  "overrides": [
+    {
+      "files": ["src/pages/index.tsx"],
+      "rules": {
+        "no-default-export": "off"
+      }
+    }
+  ]
+}
