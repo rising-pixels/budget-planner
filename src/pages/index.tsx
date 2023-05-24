@@ -8,13 +8,20 @@ interface LuckyNumber {
   number: number;
 }
 
-class MySubclassedDexie extends Dexie {
+export interface Category {
+  uuid: string;
+  name: string;
+}
+
+export class MySubclassedDexie extends Dexie {
   luckyNumber: Table<LuckyNumber>;
+  categories: Table<Category>;
 
   constructor() {
     super("budgetPlannerDatabase");
-    this.version(1).stores({
+    this.version(2).stores({
       luckyNumber: "number",
+      categories: "uuid, name",
     });
   }
 }
