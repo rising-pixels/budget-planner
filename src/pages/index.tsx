@@ -3,14 +3,10 @@ import Dexie, { Table } from "dexie";
 import { Typography } from "antd";
 import "antd/dist/reset.css";
 import styled from "@emotion/styled";
+import { Category } from "../modules/categories/types/Category";
 
 interface LuckyNumber {
   number: number;
-}
-
-export interface Category {
-  uuid: string;
-  name: string;
 }
 
 export class MySubclassedDexie extends Dexie {
@@ -21,7 +17,7 @@ export class MySubclassedDexie extends Dexie {
     super("budgetPlannerDatabase");
     this.version(2).stores({
       luckyNumber: "number",
-      categories: "uuid, name",
+      categories: "&uuid, name",
     });
   }
 }

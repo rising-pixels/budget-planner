@@ -1,4 +1,4 @@
-import { Category } from "../../pages";
+import { Category } from "../types/Category";
 
 export const categoryNameExists = (categories: Category[], name: string) => {
   return !!categories.some(
@@ -7,5 +7,5 @@ export const categoryNameExists = (categories: Category[], name: string) => {
 };
 
 export const categoryUuidExists = (categories: Category[], uuid: string) => {
-  return categories.some((category) => category.uuid === uuid);
+  return !!categories.some((category) => category.uuid === uuid);
 };
