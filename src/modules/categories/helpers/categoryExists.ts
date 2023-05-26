@@ -1,4 +1,4 @@
-import { Category } from "../types/Category";
+import { Category } from "../types/category";
 
 export const categoryNameExists = (categories: Category[], name: string) => {
   return !!categories.some(

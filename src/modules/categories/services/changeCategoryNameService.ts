@@ -1,5 +1,5 @@
 import { MySubclassedDexie } from "../../../pages";
-import { Category } from "../types/Category";
+import { Category } from "../types/category";
 import { categoryNameExists } from "../helpers/categoryExists";
 
 export const changeCategoryName = async (

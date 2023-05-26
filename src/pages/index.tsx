@@ -3,7 +3,7 @@ import Dexie, { Table } from "dexie";
 import { Typography } from "antd";
 import "antd/dist/reset.css";
 import styled from "@emotion/styled";
-import { Category } from "../modules/categories/types/Category";
+import { Category } from "../modules/categories/types/category";
 
 interface LuckyNumber {
   number: number;
