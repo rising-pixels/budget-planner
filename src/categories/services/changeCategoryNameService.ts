@@ -1,15 +1,17 @@
-import { MySubclassedDexie } from "../../../pages";
+import { MySubclassedDexie } from "../../pages";
+import { Category } from "../types/category";
 import { categoryNameExists } from "../helpers/categoryExists";
-import { v4 as uuidv4 } from "uuid";
 
-export const addCategory = async (db: MySubclassedDexie, name: string) => {
+export const changeCategoryName = async (
+  db: MySubclassedDexie,
+  { uuid, name }: Category
+) => {
   try {
     const existingCategories = await db.categories.toArray();
     if (categoryNameExists(existingCategories, name)) {
       throw new Error("This category exists!");
     }
-    const category = { uuid: uuidv4(), name };
-    await db.categories.add(category);
+    await db.categories.update(uuid, { name });
   } catch (error) {
     console.log(error);
   }

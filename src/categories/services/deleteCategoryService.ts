@@ -1,4 +1,4 @@
-import { MySubclassedDexie } from "../../../pages";
+import { MySubclassedDexie } from "../../pages";
 import { categoryUuidExists } from "../helpers/categoryExists";
 
 export const deleteCategory = async (db: MySubclassedDexie, uuid: string) => {
