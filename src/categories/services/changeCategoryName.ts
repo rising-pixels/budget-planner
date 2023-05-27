@@ -10,5 +10,5 @@ export const changeCategoryName = async (
   if (categoryNameExists(existingCategories, name)) {
     throw new Error("This category exists!");
   }
-  return db.categories.update(uuid, { name });
+  return db.categories.update(uuid, { name: name.trim() });
 };
