@@ -5,7 +5,3 @@ export const categoryNameExists = (categories: Category[], name: string) => {
     (category: Category) => category.name.toLowerCase() === name.toLowerCase()
   );
 };
-
-export const categoryUuidExists = (categories: Category[], uuid: string) => {
-  return categories.some((category) => category.uuid === uuid);
-};
