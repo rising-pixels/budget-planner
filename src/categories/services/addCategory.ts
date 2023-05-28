@@ -8,6 +8,6 @@ export const addCategory = async (db: MySubclassedDexie, name: string) => {
     throw new Error("This category exists!");
   }
   const category = { uuid: uuidv4(), name: name.trim() };
-  
+
   return db.categories.add(category);
 };
