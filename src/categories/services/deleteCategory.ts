@@ -1,5 +1,5 @@
 import { MySubclassedDexie } from "../../pages";
-import { categoryUuidExists } from "../helpers/categoryExists";
+import { categoryUuidExists } from "../validators/categoryExists";
 
 export const deleteCategory = async (db: MySubclassedDexie, uuid: string) => {
   const existingCategories = await db.categories.toArray();
