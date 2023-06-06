@@ -3,18 +3,21 @@ import Dexie, { Table } from "dexie";
 import { Typography } from "antd";
 import "antd/dist/reset.css";
 import styled from "@emotion/styled";
+import { Category } from "../categories/types/category";
 
 interface LuckyNumber {
   number: number;
 }
 
-class MySubclassedDexie extends Dexie {
+export class MySubclassedDexie extends Dexie {
   luckyNumber: Table<LuckyNumber>;
+  categories: Table<Category>;
 
   constructor() {
     super("budgetPlannerDatabase");
-    this.version(1).stores({
+    this.version(2).stores({
       luckyNumber: "number",
+      categories: "&id, name",
     });
   }
 }
