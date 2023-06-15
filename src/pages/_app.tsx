@@ -1,6 +1,7 @@
 import React from "react";
 import { ThemeProvider } from "@emotion/react";
 import { theme } from "antd";
+import { Layout } from "../layout";
 
 const { useToken } = theme;
 
@@ -9,7 +10,9 @@ function App({ Component, pageProps }) {
 
   return (
     <ThemeProvider theme={token}>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </ThemeProvider>
   );
 }
