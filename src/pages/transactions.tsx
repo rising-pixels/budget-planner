@@ -2,7 +2,7 @@ import React from "react";
 import { Transactions } from "../transactions/Transactions";
 import Head from "next/head";
 
-const transactions = () => {
+const TransactionsView = () => {
   return (
     <>
       <Head>
@@ -14,4 +14,4 @@ const transactions = () => {
 };
 
 // eslint-disable-next-line import/no-default-export
-export default transactions;
+export default TransactionsView;
