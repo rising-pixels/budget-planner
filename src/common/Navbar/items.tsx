@@ -1,33 +1,34 @@
 import { DollarOutlined, CreditCardOutlined } from "@ant-design/icons";
 import styled from "@emotion/styled";
+import Link from "next/link";
 
 const SpanStyled = styled.span`
-  font-size: 16px;
+  font-size: 1rem;
 `;
 
-const DivStyled = styled.div`
+const LinkStyled = styled(Link)`
   display: flex;
   align-items: center;
-  font-size: 24px;
+  font-size: 1.5rem;
 `;
 
 export const items = [
   {
     key: "/",
     label: (
-      <DivStyled>
+      <LinkStyled href="/">
         <DollarOutlined />
         <SpanStyled>Budget</SpanStyled>
-      </DivStyled>
+      </LinkStyled>
     ),
   },
   {
     key: "/transactions",
     label: (
-      <DivStyled>
+      <LinkStyled href="/transactions">
         <CreditCardOutlined />
         <SpanStyled>Transactions</SpanStyled>
-      </DivStyled>
+      </LinkStyled>
     ),
   },
 ];
