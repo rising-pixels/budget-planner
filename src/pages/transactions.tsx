@@ -1,12 +1,13 @@
 import React from "react";
 import { Transactions } from "../transactions/Transactions";
 import Head from "next/head";
+import { generatePageTitle } from "../helpers/generatePageTitle";
 
 const TransactionsView = () => {
   return (
     <>
       <Head>
-        <title>Transactions | Budget Planner</title>
+        <title>{generatePageTitle("Transactions")}</title>
       </Head>
       <Transactions />
     </>
