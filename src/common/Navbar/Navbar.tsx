@@ -11,8 +11,12 @@ const TabsStyled = styled(Tabs)`
   .ant-tabs-ink-bar {
     color: ${(props) => props.theme["geekblue-5"]};
   }
+  .ant-tabs-tab {
+    padding: 0;
+  }
   .ant-tabs-tab a {
     color: ${(props) => props.theme.colorText};
+    padding: 12px 0;
   }
   .ant-tabs-tab-active a {
     color: ${(props) => props.theme["geekblue-5"]};
