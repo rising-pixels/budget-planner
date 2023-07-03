@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Dexie, { Table } from "dexie";
-import { Typography } from "antd";
+import { Typography, Button } from "antd";
 import "antd/dist/reset.css";
 import styled from "@emotion/styled";
 import { Category } from "../categories/types/category";
-
+import plus from "../assets/Plus.png";
 interface LuckyNumber {
   number: number;
 }
@@ -29,7 +29,14 @@ const { Text } = Typography;
 const TextStyled = styled(Text)`
   color: ${(props) => props.theme.blue6};
 `;
-
+const ButtonStyled = styled(Button)`
+  width: 358px;
+  height: 32px;
+`;
+const PlusIcon = styled.img`
+  width: 14px;
+  height: 14px;
+`;
 const HomePage = () => {
   const [luckyNumber, setLuckyNumber] = useState<number | null>(null);
 
@@ -77,6 +84,10 @@ const HomePage = () => {
       ) : (
         <p>No luck today</p>
       )}
+      <ButtonStyled type="dashed">
+        <PlusIcon></PlusIcon>
+        New category
+      </ButtonStyled>
     </>
   );
 };
