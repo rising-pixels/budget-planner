@@ -1,7 +1,6 @@
 import React from "react";
-import { Transactions } from "../transactions/Transactions";
 import Head from "next/head";
-import { generatePageTitle } from "../helpers/generatePageTitle";
+import { generatePageTitle } from "../common/helpers/generatePageTitle";
 
 const TransactionsView = () => {
   return (
@@ -9,7 +8,6 @@ const TransactionsView = () => {
       <Head>
         <title>{generatePageTitle("Transactions")}</title>
       </Head>
-      <Transactions />
     </>
   );
 };

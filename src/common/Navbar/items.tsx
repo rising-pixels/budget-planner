@@ -1,7 +1,7 @@
 import { DollarOutlined, CreditCardOutlined } from "@ant-design/icons";
 import styled from "@emotion/styled";
 import Link from "next/link";
-import { HOME_URL, TRANSACTIONS_URL } from "../appUrls";
+import { APP_URLS } from "../appUrls";
 
 const SpanStyled = styled.span`
   font-size: 1rem;
@@ -15,18 +15,18 @@ const LinkStyled = styled(Link)`
 
 export const items = [
   {
-    key: HOME_URL,
+    key: APP_URLS.home,
     label: (
-      <LinkStyled href={HOME_URL}>
+      <LinkStyled href={APP_URLS.home}>
         <DollarOutlined />
         <SpanStyled>Budget</SpanStyled>
       </LinkStyled>
     ),
   },
   {
-    key: TRANSACTIONS_URL,
+    key: APP_URLS.transactions,
     label: (
-      <LinkStyled href={TRANSACTIONS_URL}>
+      <LinkStyled href={APP_URLS.transactions}>
         <CreditCardOutlined />
         <SpanStyled>Transactions</SpanStyled>
       </LinkStyled>

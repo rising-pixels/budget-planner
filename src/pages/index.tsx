@@ -5,7 +5,7 @@ import "antd/dist/reset.css";
 import styled from "@emotion/styled";
 import { Category } from "../categories/types/category";
 import Head from "next/head";
-import { generatePageTitle } from "../helpers/generatePageTitle";
+import { generatePageTitle } from "../common/helpers/generatePageTitle";
 
 interface LuckyNumber {
   number: number;
