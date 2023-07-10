@@ -10,7 +10,6 @@ export class MySubclassedDexie extends Dexie {
   constructor() {
     super("budgetPlannerDatabase");
     this.version(3).stores({
-      luckyNumber: "number",
       categories: "&id, name",
     });
   }
