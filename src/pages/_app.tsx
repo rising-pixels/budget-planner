@@ -1,7 +1,7 @@
 import React from "react";
 import { ThemeProvider } from "@emotion/react";
 import { theme } from "antd";
-import { Layout } from "../common/layout";
+import { Layout } from "../common/Layout";
 
 const { useToken } = theme;
 
